@@ -10,7 +10,7 @@ mtailor.eval()
 
 # LOADING TEST IMAGE
 img = Image.open("n01667114_mud_turtle.JPEG")
-inp = mtailor.preprocess_numpy(img).unsqueeze(0) 
+inp = mtailor.preprocess_numpy(img).unsqueeze_(0)
 res = mtailor.forward(inp)
 
 # INPUT/OUTPUT PARAMS
