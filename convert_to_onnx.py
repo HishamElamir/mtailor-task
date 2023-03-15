@@ -5,7 +5,7 @@ from pytorch_model import Classifier, BasicBlock
 
 
 mtailor = Classifier(BasicBlock, [2, 2, 2, 2])
-mtailor.load_state_dict(torch.load("resnet18-f37072fd.pth"))
+mtailor.load_state_dict(torch.load("pytorch_model_weights.pth"))
 mtailor.eval()
 
 img = Image.open("n01667114_mud_turtle.JPEG")
@@ -18,7 +18,7 @@ output_names = ["output"]
 torch.onnx.export(
     mtailor,
     inp,
-    "resnet50.onnx",
+    "mtailor-resnet.onnx",
     verbose=False,
     input_names=input_names,
     output_names=output_names,
