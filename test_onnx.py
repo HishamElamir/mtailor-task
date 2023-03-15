@@ -20,7 +20,7 @@ def preprocess_numpy(img):
     img.unsqueeze_(0)
     return img
 
-onnx_session= onnxrt.InferenceSession("resnet50.onnx")
+onnx_session= onnxrt.InferenceSession("mtailor-resnet.onnx")
 
 img1 = Image.open("mtailor_mlops_assessment/n01440764_tench.jpeg")
 img1 = preprocess_numpy(img1)
