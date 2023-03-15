@@ -13,5 +13,5 @@ RUN python3 -m pip install torch torchvision --extra-index-url https://download.
 RUN python3 -m pip install numpy Pillow torch torchvision onnx
 
 RUN wget https://www.dropbox.com/s/b7641ryzmkceoc9/pytorch_model_weights.pth
-RUN python3 mtailor_mlops_assessment/convert_to_onnx.py -f mtailor_mlops_assessment/pytorch_model.py -c resnet18-f37072fd.pth
-RUN python3 mtailor_mlops_assessment/test_onnx.py -m mtailor_mlops_assessment/resnet50.onnx
+RUN python3 convert_to_onnx.py -f pytorch_model.py -c resnet18-f37072fd.pth
+RUN python3 test_onnx.py -m resnet50.onnx
