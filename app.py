@@ -12,7 +12,7 @@ from test_onnx import to_numpy, preprocess_numpy
 def init():
     global model
     
-    onnx_session= onnxrt.InferenceSession("resnet50.onnx")
+    onnx_session= onnxrt.InferenceSession("mtailor-resnet.onnx")
 
     img1 = Image.open("n01440764_tench.jpeg")
     img1 = preprocess_numpy(img1)
