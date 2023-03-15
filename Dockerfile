@@ -1,4 +1,8 @@
-FROM bitnami/pytorch:latest
+FROM ubuntu:latest
+
+RUN  apt-get update \
+  && apt-get install -y wget \
+  && rm -rf /var/lib/apt/lists/*
 
 # 🍌: Add your custom app code, init() and inference()
 ADD . .
