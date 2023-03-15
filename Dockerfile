@@ -1,4 +1,4 @@
-FROM python:latest
+FROM bitnami/pytorch:latest
 
 # 🍌: Add your custom app code, init() and inference()
 ADD . .
