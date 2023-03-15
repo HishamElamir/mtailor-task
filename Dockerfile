@@ -9,7 +9,7 @@ ADD . .
 
 EXPOSE 8000
 
-RUN python3 -m pip install torch torchvision torchaudio --extra-index-url https://download.pytorch.org/whl/cu116
+RUN python3 -m pip install torch torchvision --extra-index-url https://download.pytorch.org/whl/cu116
 RUN python3 -m pip install numpy Pillow torch torchvision onnx
 
 RUN wget https://www.dropbox.com/s/b7641ryzmkceoc9/pytorch_model_weights.pth
