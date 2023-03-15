@@ -1,7 +1,7 @@
-FROM ubuntu:latest
+FROM python:latest
 
 RUN  apt-get update \
-  && apt-get install -y wget python \
+  && apt-get install -y wget \
   && rm -rf /var/lib/apt/lists/*
 
 # 🍌: Add your custom app code, init() and inference()
