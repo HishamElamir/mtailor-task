@@ -14,4 +14,4 @@ RUN python3 -m pip install numpy Pillow torch torchvision onnx
 
 RUN wget https://www.dropbox.com/s/b7641ryzmkceoc9/pytorch_model_weights.pth
 RUN python3 convert_to_onnx.py -f pytorch_model.py -c pytorch_model_weights.pth
-RUN python3 test_onnx.py -m resnet50.onnx
+RUN python3 test_onnx.py -m pytorch_model_weights.onnx
